@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gm_notes",
+  "info": {
+    "singularName": "gm-note",
+    "pluralName": "gm-notes",
+    "displayName": "Inbox",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "player": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::player.player",
+      "inversedBy": "gm_notes"
+    },
+    "to": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
+      "type": "string",
+      "required": true
+    },
+    "regarding": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "replyTo": {
+      "type": "string"
+    },
+    "replyFrom": {
+      "type": "string"
+    },
+    "replyRegarding": {
+      "type": "string"
+    },
+    "replyBody": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "message",
+        "video"
+      ],
+      "required": true
+    },
+    "replied": {
+      "type": "boolean",
+      "default": false
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

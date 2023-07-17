@@ -1,0 +1,125 @@
+{
+  "kind": "collectionType",
+  "collectionName": "players",
+  "info": {
+    "singularName": "player",
+    "pluralName": "players",
+    "displayName": "Player",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "userId": {
+      "type": "string",
+      "required": true
+    },
+    "character": {
+      "type": "string",
+      "required": true
+    },
+    "pronouns": {
+      "type": "string",
+      "required": true
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "twitch": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string",
+      "required": true
+    },
+    "job": {
+      "type": "string",
+      "required": true
+    },
+    "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "profileImageWide": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "biographies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::biography.biography",
+      "mappedBy": "player"
+    },
+    "gm_notes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gm-note.gm-note",
+      "mappedBy": "player"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "personal_galleries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::personal-gallery.personal-gallery",
+      "inversedBy": "players"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "player",
+        "gm",
+        "guest"
+      ],
+      "default": "player"
+    },
+    "contacts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::contact.contact",
+      "mappedBy": "players"
+    },
+    "backupUserId": {
+      "type": "string"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "gm",
+        "player"
+      ],
+      "default": "player",
+      "required": true
+    },
+    "impersonate": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::player.player"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

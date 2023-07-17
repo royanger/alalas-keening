@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "new_stories",
+  "info": {
+    "singularName": "new-story",
+    "pluralName": "new-stories",
+    "displayName": "News Story",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "byline": {
+      "type": "string",
+      "required": true
+    },
+    "inlayPosition": {
+      "type": "enumeration",
+      "enum": [
+        "top-right",
+        "bottom-right",
+        "bottom-left",
+        "top-left"
+      ],
+      "default": "bottom-right"
+    },
+    "accentColour": {
+      "type": "enumeration",
+      "enum": [
+        "blue",
+        "gray",
+        "red",
+        "green",
+        "indigo",
+        "orange"
+      ],
+      "default": "blue"
+    },
+    "current": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "reporter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::reporter.reporter",
+      "inversedBy": "news_stories"
+    }
+  }
+}
