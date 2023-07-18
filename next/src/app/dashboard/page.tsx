@@ -6,7 +6,6 @@ import { getPlayer } from '@/lib/getPlayer'
 
 export default async function Page() {
 
-
   const { userId } = auth()
   if (!userId) return null
 
