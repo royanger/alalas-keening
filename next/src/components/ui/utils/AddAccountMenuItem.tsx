@@ -1,5 +1,4 @@
 import { SignInButton } from "@clerk/nextjs";
-// import { Plus } from "lucide-react";
 import DropdownMenuItemWithIcon from "./DropdownMenuItemWithIcon";
 
 const AddAccountMenuItem = () => {
