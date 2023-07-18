@@ -5,6 +5,7 @@
   "description": "Strapi API for Alaal's Keening",
   "scripts": {
     "dev": "strapi develop",
+    "start:dev": "strapi develop",
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",

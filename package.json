@@ -1,19 +1,14 @@
 {
-  "name": "theexpanse-obs",
+  "name": "alalas-keening",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently 'pnpm dev:strapi' 'pnpm dev:next'",
-    "dev:next": "npm run dev --prefix next",
-    "dev:strapi": "npm run develop --prefix strapi",
+    "start": "pnpm --stream -r start",
+    "start:dev": "pnpm --stream -r run start:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@ably-labs/react-hooks": "^2.1.1",
-    "concurrently": "^8.2.0"
-  }
+  "author": "roy@royanger.com",
+  "license": "MIT"
 }
