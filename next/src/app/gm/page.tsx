@@ -92,7 +92,7 @@ export default async function Page() {
         </ul>
         <Title type="h2" css="pt-12">Players</Title>
         <ul className="grid grid-cols-3 gap-6">
-          {players.data.filter((player: any) => { return player.attributes.role === 'player' }).map((player: any, index: number) => {
+          {players.data.filter((player: any, index: number) => { return player.attributes.role === 'player' }).map((player: any, index: number) => {
             return (
               <Card className="w-full" key={index}>
                 <CardHeader>

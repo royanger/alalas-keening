@@ -1,0 +1,19 @@
+{
+  "name": "theexpanse-obs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently 'pnpm dev:strapi' 'pnpm dev:next'",
+    "dev:next": "npm run dev --prefix next",
+    "dev:strapi": "npm run develop --prefix strapi",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ably-labs/react-hooks": "^2.1.1",
+    "concurrently": "^8.2.0"
+  }
+}
