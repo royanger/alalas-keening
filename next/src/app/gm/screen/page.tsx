@@ -1,7 +1,7 @@
 import { Header } from "@/components/header/header";
 import { ChurnPool } from "./churn";
 import { Title } from "@/components/ui/title"
-
+import { env } from '@/lib/env.mjs'
 
 export default function Page() {
 
@@ -16,7 +16,7 @@ export default function Page() {
       <div className="h-screen grid grid-cols-12 font-body">
 
         <div className="mx-2 mt-2 flex flex-col gap-2 col-span-2">
-          <ChurnPool />
+          <ChurnPool ablyKey={env.ABLY_API_KEY} />
           <Actions />
         </div>
         <div className="mx-2 mt-2 col-span-4">

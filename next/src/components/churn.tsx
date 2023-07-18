@@ -3,11 +3,12 @@
 import * as React from 'react';
 import { configureAbly, useChannel } from '@ably-labs/react-hooks';
 
-configureAbly({
-  key: '6r7AGg.pKzEdQ:sHOR1Au4kP5dgidUDNOn-sYAJS-qeRmMVFv3mvBmLLk',
-});
+export const ChurnDisplay = ({ ablyKey }: { ablyKey: string }) => {
 
-export const ChurnDisplay = () => {
+  configureAbly({
+    key: ablyKey
+  });
+
   const [churn, setChurn] = React.useState(0);
   const [channel] = useChannel('churn', (message) => {
     setChurn(message.data.value);

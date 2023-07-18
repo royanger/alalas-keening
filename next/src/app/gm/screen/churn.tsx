@@ -5,12 +5,12 @@ import { configureAbly, useChannel } from '@ably-labs/react-hooks';
 import { faCircle, faCircleDot } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-configureAbly({
-  key: '6r7AGg.4b7rIg:NMNr7MCQ43VU_Fimnw0k4J8MlZwIbvx1uxuauPi1apU',
-});
+export const ChurnPool = ({ ablyKey }: { ablyKey: string }) => {
 
+  configureAbly({
+    key: ablyKey
+  });
 
-export const ChurnPool = () => {
   const [churn, setChurn] = React.useState(0);
   const [channel, ably] = useChannel('churn', (message) => {
     setChurn(message.data.value);

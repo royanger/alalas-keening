@@ -71,7 +71,7 @@ export default async function PlayersMap() {
       <div className="grid grid-cols-2 gap-7">
         {/* <div></div> */}
         <div className="flex items-center justify-center">
-          <ChurnDisplay />
+          <ChurnDisplay ablyKey={env.ABLY_API_KEY} />
         </div>
         {res.data.map((player: any) => {
           return (

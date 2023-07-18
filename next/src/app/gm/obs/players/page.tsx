@@ -54,7 +54,7 @@ export default async function Players() {
           </h1>
         </div>
 
-        <ChurnDisplay />
+        <ChurnDisplay ablyKey={env.ABLY_API_KEY} />
       </div>
 
       <div className="grid grid-cols-3 gap-11">
