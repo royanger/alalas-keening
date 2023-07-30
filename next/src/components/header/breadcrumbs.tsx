@@ -22,7 +22,7 @@ export const Breadcrumbs = () => {
   const pathname = usePathname().substring(1).split('/')
 
   return (
-    <div className="flex flex-row justify-center">
+    <div className="flex-row justify-center hidden xl:flex">
       <div className="py-2 mb-8 container">
         <ul className="flex flex-row items-end relative">
           <li><FontAwesomeIcon icon={faHashtag} className='h-4 text-gray-800 dark:text-gray-200 mr-2 bottom-[-2px] relative' /></li>

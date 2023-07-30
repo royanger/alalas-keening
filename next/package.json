@@ -47,6 +47,8 @@
   },
   "devDependencies": {
     "bufferutil": "^4.0.7",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.4.1",
     "utf-8-validate": "5.0.2"
   }
 }

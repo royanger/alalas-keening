@@ -86,13 +86,13 @@ export default async function Page() {
               return (
                 <TableRow>
                   <TableCell className="font-medium text-center">
-                    {message.attributes.type === 'message' && <FontAwesomeIcon icon={faFile} className="h-8" />}
-                    {message.attributes.type === 'video' && <FontAwesomeIcon icon={faFileVideo} className="h-8" />}
+                    {message.attributes.type === 'message' && <FontAwesomeIcon icon={faFile} className="h-4 md:h-6 lg:h-8" />}
+                    {message.attributes.type === 'video' && <FontAwesomeIcon icon={faFileVideo} className="h-4 md:h-6 lg:h-8" />}
                   </TableCell>
                   <TableCell>
                     <div className="flex flex-col">
                       <Link href={`/dashboard/inbox/${message.attributes.slug}`}>
-                        <Title type="h3" css="m-0 p-0 mt-2">
+                        <Title type="h3" css="m-0 p-0 mt-2 ">
                           {message.attributes.regarding ?
                             message.attributes.regarding :
                             'No subject provided'}

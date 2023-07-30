@@ -49,8 +49,8 @@ export default async function Page() {
         <div className="mt-12">
           {news.data.map((story: any) => {
             return (
-              <div className="mb-12 grid grid-cols-8 gap-8" key={story.id}>
-                <div className="col-span-2">
+              <div className="mb-12 grid grid-cols-1 md:grid-cols-8 gap-8" key={story.id}>
+                <div className="md:col-span-2">
                   <Image
                     src={story.attributes.image.data.attributes.formats.small.url}
                     alt={story.attributes.reporter.data.attributes.name}
@@ -59,7 +59,7 @@ export default async function Page() {
                     className="border border-gray-500 dark:border-gray-600 rounded-lg"
                   />
                 </div>
-                <div className="col-span-6 flex flex-col justify-center">
+                <div className="md:col-span-6 flex flex-col justify-center">
                   <div>
                     <Title type="h3" css={clsx(
                       colours[story.attributes.accentColour],
@@ -70,7 +70,7 @@ export default async function Page() {
                     < Markdown>
                       {story.attributes.byline}
                     </Markdown>
-                    <p>{story.attributes.reporter.data.attributes.name}</p>
+                    <p>{story.attributes.reporter.data.attributes.feed}</p>
                   </div>
                 </div>
               </div>

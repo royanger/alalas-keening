@@ -3,7 +3,7 @@ import clsx from 'clsx'
 const types = {
   h1: 'text-3xl md:text-4xl font-title mt-6 mb-2 text-gray-700 dark:text-gray-200',
   h2: 'text-2.5xl md:text-3xl font-title mt-4 mb-2 text-slate-600 dark:text-gray-300',
-  h3: 'text-2xl font-title mt-4 mb-2 p-2',
+  h3: 'text-lg md:text-xl lg:text-2xl font-title mt-4 mb-2 p-2',
   h4: 'text-2xl font-sans mt-3',
   h5: 'text-xl font-sans mt-3',
   h6: 'text-lg font-sans mt-3',

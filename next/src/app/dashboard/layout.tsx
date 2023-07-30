@@ -30,9 +30,9 @@ export default async function DashboardLayout({
         <Impersonating character={player.character} />}
       <Header />
       <Breadcrumbs />
-      <article className="flex flex-row justify-center pb-52">
+      <article className="flex flex-row justify-center pb-80 lg:pb-52 pt-20 xl:pt-0">
         <div className="container grid grid-cols-10">
-          <div className="col-span-2">
+          <div className="hidden lg:block lg:col-span-2">
             <Title type="h2" css="text-2xl md:text-2xl">{player.character}</Title>
             <ul>
               <li>{player.name} ({player.pronouns})</li>
@@ -52,7 +52,7 @@ export default async function DashboardLayout({
 
             </div>
           </div>
-          <div className="col-span-8">
+          <div className="col-span-10 lg:col-span-8">
             {children}
           </div>
         </div>

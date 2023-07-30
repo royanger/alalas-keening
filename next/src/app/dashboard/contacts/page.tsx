@@ -46,9 +46,9 @@ export default async function Page() {
 
           return (
             <>
-              <div className="grid grid-cols-8 gap-8">
-                <div className="col-span-2">
-                  <div className="flex items-center justify-center h-full">
+              <div className="flex flex-col md:flex-row gap-8">
+                <div className="flex justify-center items-center">
+                  <div className="flex items-center justify-center h-full w-56">
                     {contact.attributes.image.data ? (
                       <Image
                         src={contact.attributes.image.data.attributes.url}

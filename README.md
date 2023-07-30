@@ -8,12 +8,13 @@ This allows the creation of OBS screen in React/Next, and the management of info
 
 - [ ]  allows players to respond to messages
 - [ ]  pagination for inbox
-- [ ]  paginzation for contacts
-- [ ]  pagnization for new stories
+- [ ]  pagination for contacts
+- [ ]  pagniation for new stories
 - [ ]  search for news stories
 - [ ]  search for inbox
 - [ ]  use the Clerk user.created Webhook and a 'guest' role to allow guests
 - [ ]  switch off Ably? 
+- [x]  add adjustments and media queries for mobile
 
 
 ## Required
