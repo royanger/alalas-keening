@@ -82,9 +82,9 @@ export default async function Page() {
           </TableHeader>
 
           <TableBody>
-            {inbox.data.map((message: any) => {
+            {inbox.data.map((message: any, index: number) => {
               return (
-                <TableRow>
+                <TableRow key={index}>
                   <TableCell className="font-medium text-center">
                     {message.attributes.type === 'message' && <FontAwesomeIcon icon={faFile} className="h-4 md:h-6 lg:h-8" />}
                     {message.attributes.type === 'video' && <FontAwesomeIcon icon={faFileVideo} className="h-4 md:h-6 lg:h-8" />}

@@ -34,15 +34,20 @@ const links = [
     info: 'Players, GM, Churn and the RP map',
   },
   {
-    name: 'Newsfeed',
+    name: 'Newsfeed 1',
     href: '/gm/obs/newsfeed1',
     info: 'The current newsfeeds from the Sol System!',
   },
   {
-    name: 'Newsfeed - Alternative',
+    name: 'Newsfeed - 2',
     href: '/gm/obs/newsfeed2',
     info: 'Newsfeed with alternative layout/info',
   },
+  {
+    name: 'Newsfeed - 3',
+    href: '/gm/obs/newsfeed3',
+    info: 'Newsfeed with alternative layout/info',
+  }
 ];
 
 

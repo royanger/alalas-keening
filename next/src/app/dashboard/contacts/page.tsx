@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { Title } from '@/components/ui/title'
 import { auth } from '@clerk/nextjs'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
@@ -45,7 +46,7 @@ export default async function Page() {
         {contacts.data.map((contact: any, index: number) => {
 
           return (
-            <>
+            <React.Fragment key={index}>
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex justify-center items-center">
                   <div className="flex items-center justify-center h-full w-56">
@@ -66,7 +67,7 @@ export default async function Page() {
                 </div>
               </div>
               {index + 1 < contacts.data.length && (<Separator className="my-8" />)}
-            </>
+            </React.Fragment>
           )
         })}
 

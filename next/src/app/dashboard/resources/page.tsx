@@ -50,9 +50,9 @@ export default async function Page() {
           </TableHeader>
           <TableBody className="text-xl">
 
-            {resources.data.map((resource: any) => {
+            {resources.data.map((resource: any, index: number) => {
               return (
-                <TableRow>
+                <TableRow key={index}>
                   <TableCell className="font-medium">{resource.attributes.name}</TableCell>
                   <TableCell className="text-right">
                     {resource.attributes.link &&

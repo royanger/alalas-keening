@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { Header } from "@/components/header/header";
 import { ChurnPool } from "./churn";
 import { Title } from "@/components/ui/title"
@@ -122,8 +123,8 @@ const Focuses = () => {
       </div>
       {FocusList.map((focus, index) => {
         return (
-          <>
-            <div key={index} className="bg-black text-white">
+          <React.Fragment key={index}>
+            <div className="bg-black text-white">
               {focus.ability}
             </div>
             <div className="grid grid-cols-3 text-black">
@@ -131,7 +132,7 @@ const Focuses = () => {
                 return <p key={index}>{focus}</p>;
               })}
             </div>
-          </>
+          </React.Fragment>
         );
       })}
     </div>

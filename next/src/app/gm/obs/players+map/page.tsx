@@ -73,9 +73,10 @@ export default async function PlayersMap() {
         <div className="flex items-center justify-center">
           <ChurnDisplay ablyKey={env.ABLY_API_KEY} />
         </div>
-        {res.data.map((player: any) => {
+        {res.data.map((player: any, index: number) => {
           return (
             <PlayerCard
+              key={index}
               name={player.attributes.name}
               twitter={player.attributes.twitter}
               twitch={player.attributes.twitch}
