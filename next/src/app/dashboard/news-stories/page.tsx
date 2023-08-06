@@ -52,7 +52,11 @@ export default async function Page() {
               <div className="mb-12 grid grid-cols-1 md:grid-cols-8 gap-8" key={story.id}>
                 <div className="md:col-span-2">
                   <Image
-                    src={story.attributes.image.data.attributes.formats.small.url}
+                    src={
+                      story.attributes.image.data.attributes.formats.small
+                        ? story.attributes.image.data.attributes.formats.small.url
+                        : story.attributes.image.data.attributes.url
+                    }
                     alt={story.attributes.reporter.data.attributes.name}
                     width={story.attributes.image.data.attributes.width}
                     height={story.attributes.image.data.attributes.height}

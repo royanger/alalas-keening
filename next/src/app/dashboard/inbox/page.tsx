@@ -36,10 +36,26 @@ async function getInbox(userId: string) {
 
 const determineStatus = (replied: string, publishedAt: string) => {
 
+  if (replied && Math.floor(DateTime.now().toSeconds() -
+    DateTime.fromISO(publishedAt).toSeconds()) < 604800) return (
+      <div>
+        <Badge className={clsx(
+          "bg-orange-600 hover:bg-orange-600 dark:bg-orange-400 dark:hover:bg-orange-400 mb-4"
+        )}>
+          New
+        </Badge>
+        <Badge className="bg-green-700 hover:bg-green-700 dark:bg-green-400 dark:hover:bg-green-400">
+          Replied
+        </Badge>
+
+      </div>
+    )
   if (replied) return (
-    <Badge className="bg-green-700 hover:bg-green-700 dark:bg-green-400 dark:hover:bg-green-400">
-      Replied
-    </Badge>
+    <div>
+      <Badge className="bg-green-700 hover:bg-green-700 dark:bg-green-400 dark:hover:bg-green-400">
+        Replied
+      </Badge>
+    </div>
   )
 
   if (Math.floor(DateTime.now().toSeconds() -
@@ -51,6 +67,7 @@ const determineStatus = (replied: string, publishedAt: string) => {
         New
       </Badge>
     )
+
   }
 
   // note is not new and has not been replied to yet -- return empty message
@@ -76,7 +93,7 @@ export default async function Page() {
             <TableRow>
               <TableHead className="w-[60px]"></TableHead>
               <TableHead>Message</TableHead>
-              <TableHead className="w-[150px] text-center">Status</TableHead>
+              <TableHead className="w-[120px] text-center">Status</TableHead>
               {/* <TableHead className="text-right">Amount</TableHead> */}
             </TableRow>
           </TableHeader>
