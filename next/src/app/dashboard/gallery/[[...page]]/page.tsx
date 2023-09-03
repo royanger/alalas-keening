@@ -13,7 +13,8 @@ async function getGallery(page: string) {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `bearer ${env.STRAPI_TOKEN}`
-    }
+    },
+    cache: 'no-store'
   })
 
   if (!res.ok) {

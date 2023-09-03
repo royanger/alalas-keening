@@ -10,7 +10,8 @@ async function getPlayers() {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `bearer ${env.STRAPI_TOKEN}`
-    }
+    },
+    cache: 'no-store'
   })
 
   if (!res.ok) {
@@ -27,7 +28,8 @@ async function getGM() {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `bearer ${env.STRAPI_TOKEN}`
-    }
+    },
+    cache: 'no-store'
   })
 
   if (!res.ok) {
