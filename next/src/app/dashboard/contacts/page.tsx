@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Title } from '@/components/ui/title'
-import { auth } from '@clerk/nextjs/sever'
+import { auth } from '@clerk/nextjs/server'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
