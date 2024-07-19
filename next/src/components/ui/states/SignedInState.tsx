@@ -1,6 +1,5 @@
 import { DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel } from "@/components/ui/dropdown-menu";
 import { SignOutButton, SignedIn, useClerk } from "@clerk/nextjs";
-import MultiAccountState from "./MultiAccountState";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,7 +25,6 @@ const SignedInState = () => {
             <span>Sign Out</span>
           </DropdownMenuItem>
         </SignOutButton>
-        <MultiAccountState />
       </DropdownMenuGroup>
     </DropdownMenuContent>
   </SignedIn>;
