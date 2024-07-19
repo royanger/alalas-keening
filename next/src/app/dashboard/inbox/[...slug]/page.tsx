@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { auth } from "@clerk/nextjs"
+import { auth } from "@clerk/nextjs/server"
 import Link from "next/link"
 import { faChevronLeft, faPaperclip } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"

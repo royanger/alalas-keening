@@ -2,7 +2,7 @@ import { Breadcrumbs } from '@/components/header/breadcrumbs';
 import { Header } from '@/components/header/header';
 import { Button } from '@/components/ui/button';
 import { Title } from '@/components/ui/title';
-import { auth } from '@clerk/nextjs';
+import { auth } from '@clerk/nextjs/server';
 import Link from 'next/link';
 import { faInbox, faBox, faSignal, faImages, faBook, faTablet, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faImages as faImages2 } from '@fortawesome/free-regular-svg-icons';

@@ -13,6 +13,8 @@
   "author": "roy@royanger.com",
   "license": "MIT",
   "dependencies": {
+    "@clerk/nextjs": "^5.2.4",
+    "@clerk/themes": "^2.1.12",
     "concurrently": "^8.2.0"
   }
 }

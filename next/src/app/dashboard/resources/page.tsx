@@ -1,5 +1,5 @@
 import { Title } from "@/components/ui/title"
-import { auth } from "@clerk/nextjs"
+import { auth } from "@clerk/nextjs/server"
 import {
   Table,
   TableBody,

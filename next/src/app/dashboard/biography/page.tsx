@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Title } from "@/components/ui/title"
-import { auth } from "@clerk/nextjs"
+import { auth } from "@clerk/nextjs/server"
 import { Markdown } from '@/components/markdown'
 import { env } from '@/lib/env.mjs'
 import { resolvePlayerId } from '@/lib/getPlayer'

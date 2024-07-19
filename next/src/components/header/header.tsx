@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Button } from '../ui/button'
 import { Separator } from "@/components/ui/separator"
 import MenuButton from '../ui/menu-button'
-import { auth } from '@clerk/nextjs'
+import { auth } from '@clerk/nextjs/server'
 import { getPlayer } from '@/lib/getPlayer'
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet'
 import { Title } from '@/components/ui/title'

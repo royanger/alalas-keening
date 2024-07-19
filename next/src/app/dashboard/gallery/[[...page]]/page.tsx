@@ -1,7 +1,7 @@
 import { Gallery } from "@/components/gallery"
 import { Button } from "@/components/ui/button"
 import { Title } from "@/components/ui/title"
-import { auth } from "@clerk/nextjs"
+import { auth } from "@clerk/nextjs/server"
 import Link from "next/link"
 import { env } from '@/lib/env.mjs'
 
